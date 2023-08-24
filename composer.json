@@ -19,6 +19,10 @@
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
+        "drupal/email_tfa": "^1.0",
+        "drupal/readmore": "^2.0@alpha",
+        "drupal/smart_trim": "^2.1",
+        "drupal/smtp": "^1.2",
         "drush/drush": "^12.1"
     },
     "require-dev": {

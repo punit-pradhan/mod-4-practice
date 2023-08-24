@@ -1,0 +1,43 @@
+uuid: e96d5532-ef74-438e-a90e-c0298c22f943
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.blogs.field_body
+    - field.field.node.blogs.field_tags
+    - node.type.blogs
+  module:
+    - readmore
+    - user
+id: node.blogs.default
+targetEntityType: node
+bundle: blogs
+mode: default
+content:
+  field_body:
+    type: readmore
+    label: above
+    settings:
+      trim_length: 50
+      trim_on_break: false
+      show_readmore: true
+      show_readless: true
+      ellipsis: false
+      wordsafe: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

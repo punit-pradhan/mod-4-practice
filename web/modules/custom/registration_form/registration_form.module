@@ -1,0 +1,12 @@
+<?php
+/**
+ * Implements hook_mail().
+ */
+function registration_form_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'notification':
+      $message['subject'] = $params['subject'];
+      $message['body'][] = $params['body'];
+      break;
+  }
+}

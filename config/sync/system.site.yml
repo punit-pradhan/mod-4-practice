@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: b6b9ba8a-ef20-4a05-9fdb-8ebf60b66d32
+name: 'practice test'
+mail: my@drupal.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /homepage
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

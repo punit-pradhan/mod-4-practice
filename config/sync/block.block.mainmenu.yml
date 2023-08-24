@@ -1,0 +1,25 @@
+uuid: 333d9711-12cf-4c83-9e95-e1a9d23e7d6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main-menu
+  module:
+    - system
+  theme:
+    - olivero
+id: mainmenu
+theme: olivero
+region: hero
+weight: 0
+provider: null
+plugin: 'system_menu_block:main-menu'
+settings:
+  id: 'system_menu_block:main-menu'
+  label: 'main menu'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
