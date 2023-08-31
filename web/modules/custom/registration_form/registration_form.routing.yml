@@ -1,7 +1,0 @@
-student_form:
-  path: "/students-registration"
-  defaults:
-    _form: '\Drupal\registration_form\Form\StudentRegistrationForm'
-    _title: "Become an student"
-  requirements:
-    _permission: "access content"

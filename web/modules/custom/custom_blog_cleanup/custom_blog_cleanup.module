@@ -1,0 +1,42 @@
+<?php 
+
+use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Messenger\MessengerInterface;
+use Drupal\Core\Logger\LoggerChannelFactoryInterface;
+
+/**
+ * Implements hook_cron().
+ */
+function custom_blog_cleanup_cron() {
+  // //  Fetch the logger service.
+  //  // Checking the time if it 5 am.
+  // $current_time = new DateTime();
+  // $current_hour = $current_time->format('H');
+  // if ($current_hour != '05') {
+  //   return;
+  // }
+  // // Calculate one year ago from the current date.
+  $one_year_ago = strtotime('-1 day');
+  
+//   // Load users with the Guest Blogger role.
+//   $guest_blogger_role = 'guest_blogger'; // Adjust the role machine name.
+//   $guest_blogger_users = \Drupal::entityTypeManager()->getStorage('user')
+//     ->loadByProperties(['roles' => [$guest_blogger_role]]);
+  
+  // Select and delete old blogs created by Guest Bloggers.
+  $query = \Drupal::database()->select('node_field_data', 'n')
+    ->fields('n', ['nid'])
+    ->condition('n.created', $one_year_ago, '<')
+    ->condition('n.type', 'blogs')
+    // ->condition('n.uid', array_keys($guest_blogger_users), 'IN')
+    ->execute();
+
+  foreach ($query as $row) {
+    $node = \Drupal\node\Entity\Node::load($row->nid);
+    if ($node) {
+      $node->delete();
+    }
+  }
+
+    }

@@ -1,0 +1,5 @@
+name: Author Form
+description: Form for new authors
+core_version_requirement: 10.x || 9.x
+type: module
+package: Custom Modules

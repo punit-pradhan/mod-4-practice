@@ -1,0 +1,8 @@
+custom_api.display_data:
+  path: '/api/blog-data'
+  defaults:
+    _controller: '\Drupal\custom_api\Controller\CustomApiController::displayData'
+    _format: 'json'
+  requirements:
+     _access: 'TRUE'
+    

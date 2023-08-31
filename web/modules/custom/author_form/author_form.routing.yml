@@ -1,0 +1,7 @@
+author_form:
+  path: "/become-an-author"
+  defaults:
+    _form: '\Drupal\author_form\Form\AuthorForm'
+    _title: "Become an Author"
+  requirements:
+    _permission: "access content"

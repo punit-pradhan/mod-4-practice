@@ -1,0 +1,5 @@
+name: 'Custom Blog Cleanup'
+type: module
+description: 'Deletes old blogs created by Guest Bloggers.'
+core_version_requirement: ^10
+package: Custom
